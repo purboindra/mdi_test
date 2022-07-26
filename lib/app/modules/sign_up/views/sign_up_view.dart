@@ -83,6 +83,14 @@ class SignUpView extends GetView<SignUpController> {
                             ),
                             borderRadius: BorderRadius.circular(10),
                           ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: GlobalVariable.primaryColor,
+                              width: 1,
+                              style: BorderStyle.none,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                         SizedBox(
                           height: 24,
@@ -104,6 +112,14 @@ class SignUpView extends GetView<SignUpController> {
                           ),
                           fillColor: GlobalVariable.secondaryColor,
                           enabledInputBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: GlobalVariable.primaryColor,
+                              width: 1,
+                              style: BorderStyle.none,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: GlobalVariable.primaryColor,
                               width: 1,
@@ -143,6 +159,14 @@ class SignUpView extends GetView<SignUpController> {
                             ),
                             fillColor: GlobalVariable.secondaryColor,
                             enabledInputBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: GlobalVariable.primaryColor,
+                                width: 1,
+                                style: BorderStyle.none,
+                              ),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            focusedErrorBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 color: GlobalVariable.primaryColor,
                                 width: 1,

@@ -69,23 +69,27 @@ class HomePageView extends GetView<HomePageController> {
               left: 43,
               right: 43,
               top: 183,
-              child: SizedBox(
+              child: Container(
                 height: Get.height,
-                child: GridView.builder(
-                  padding: EdgeInsets.zero,
-                  itemCount: controller.images.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 3,
-                    crossAxisSpacing: 3,
-                    mainAxisExtent: 112,
+                child: SafeArea(
+                  top: false,
+                  maintainBottomViewPadding: true,
+                  child: GridView.builder(
+                    padding: EdgeInsets.zero,
+                    itemCount: controller.images.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      mainAxisSpacing: 3,
+                      crossAxisSpacing: 3,
+                      mainAxisExtent: 112,
+                    ),
+                    itemBuilder: (context, index) {
+                      return Image.network(
+                        controller.images[index],
+                        fit: BoxFit.cover,
+                      );
+                    },
                   ),
-                  itemBuilder: (context, index) {
-                    return Image.network(
-                      controller.images[index],
-                      fit: BoxFit.cover,
-                    );
-                  },
                 ),
               ),
             ),
